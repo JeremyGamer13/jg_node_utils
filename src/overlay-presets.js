@@ -377,6 +377,90 @@ const presets = {
             },
         }
     },
+    "uncanny": () => {
+        const stages = [
+            "stage1",
+            "stage2",
+            "stage3",
+            "stage4",
+        ];
+        const stage = stages[Math.round(Math.random() * (stages.length - 1))];
+        const ssStyle = { top: "20%", left: "30%", width: "70%", height: "80%" };
+        if (stage === "stage3") {
+            ssStyle.filter = "sepia(50%) contrast(150%)";
+        }
+        if (stage === "stage4") {
+            ssStyle.filter = "sepia(70%) brightness(70%) contrast(200%)";
+        }
+        return {
+            name: "uncanny",
+            short: "uncanny",
+            description: "POV: Your computer has virus",
+            endpoint: "/api/scene",
+            content: {
+                // assets
+                assetsound: "audio",
+                assetpov: "image",
+                assetface: "image",
+                assetscreenshot: "screenshot",
+                // paths
+                pathsound: `uncanny/${stage}.mp3`,
+                pathpov: `pov.png`,
+                pathface: `uncanny/${stage}.png`,
+                // props
+                propsound: JSON.stringify({
+                    playbackRate: 1.2,
+                    onendedend: true,
+                    preservesPitch: true
+                }),
+                // style
+                stylepov: JSON.stringify({ width: "100%", height: "20%" }),
+                styleface: JSON.stringify({ top: "20%", width: "30%", height: "80%" }),
+                stylescreenshot: JSON.stringify(ssStyle),
+            },
+        }
+    },
+    "canny": () => {
+        const stages = [
+            "stage1",
+            "stage2",
+            "stage3",
+            "stage4",
+            "stage5",
+            "stage6",
+            "stage7",
+            "stage8",
+        ];
+        const stage = stages[Math.round(Math.random() * (stages.length - 1))];
+        const ssStyle = { top: "20%", left: "30%", width: "70%", height: "80%" };
+        return {
+            name: "canny",
+            short: "canny",
+            description: "POV: Your computer has Garry's Mod installed",
+            endpoint: "/api/scene",
+            content: {
+                // assets
+                assetsound: "audio",
+                assetpov: "image",
+                assetface: "image",
+                assetscreenshot: "screenshot",
+                // paths
+                pathsound: `canny/${stage}.mp3`,
+                pathpov: `pov.png`,
+                pathface: `canny/${stage}.png`,
+                // props
+                propsound: JSON.stringify({
+                    playbackRate: 1.2,
+                    onendedend: true,
+                    preservesPitch: true
+                }),
+                // style
+                stylepov: JSON.stringify({ width: "100%", height: "20%" }),
+                styleface: JSON.stringify({ top: "20%", width: "30%", height: "80%" }),
+                stylescreenshot: JSON.stringify(ssStyle),
+            },
+        }
+    },
 };
 
 module.exports = presets;
