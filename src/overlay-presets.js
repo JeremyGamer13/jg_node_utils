@@ -343,6 +343,40 @@ const presets = {
             },
         }
     },
+    "subwaysurfers": () => {
+        const videos = [
+            "subwaysurfer1",
+            "subwaysurfer2",
+            "subwaysurfer3",
+            "subwaysurfer4",
+        ];
+        const video = videos[Math.round(Math.random() * (videos.length - 1))] + ".mp4";
+        const style = { width: "20%", height: "100%", objectFit: "fill" };
+        if (Math.random() > 0.5) {
+            style.right = "0";
+        }
+        return {
+            name: "subwaysurfers",
+            short: "subway",
+            description: "bro cant pay attention to the video or what",
+            endpoint: "/api/scene",
+            content: {
+                // assets
+                assetvideo: "video",
+                // paths
+                pathvideo: `subwaysurfer/${video}`,
+                // props
+                propvideo: JSON.stringify({
+                    playbackRate: 1.2,
+                    onendedend: true,
+                    preservesPitch: true,
+                    volume: 0.5
+                }),
+                // style
+                stylevideo: JSON.stringify(style),
+            },
+        }
+    },
 };
 
 module.exports = presets;
