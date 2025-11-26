@@ -1,5 +1,5 @@
-const audioPresets = require("./src/audio-presets");
-const overlayPresets = require("./src/overlay-presets");
+const audioPresets = require("./audio-presets");
+const overlayPresets = require("./overlay-presets");
 
 const objectToSearchParams = (obj) => {
     const searchParams = new URLSearchParams();
