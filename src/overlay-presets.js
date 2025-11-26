@@ -10,6 +10,16 @@ const presets = {
             path: "21.webm",
         },
     }),
+    "blood": () => ({
+        name: "blood",
+        short: "blood",
+        description: "ooooouuuuuch",
+        endpoint: "/api/video",
+        content: {
+            speed: 1,
+            path: "blood.webm",
+        },
+    }),
     "car": () => ({
         name: "car",
         short: "car",
@@ -90,6 +100,16 @@ const presets = {
             path: "freakbob.webm",
         },
     }),
+    "hearts": () => ({
+        name: "hearts",
+        short: "hearts",
+        description: "i loooove",
+        endpoint: "/api/video",
+        content: {
+            speed: 1,
+            path: "hearts.webm",
+        },
+    }),
     "markiplier": () => ({
         name: "markiplier",
         short: "mark",
@@ -158,6 +178,16 @@ const presets = {
         content: {
             speed: 1,
             path: "eyeofrah.webm",
+        },
+    }),
+    "skeleton": () => ({
+        name: "skeleton",
+        short: "skeleton",
+        description: "what was that?",
+        endpoint: "/api/video",
+        content: {
+            speed: 1.65,
+            path: "skeleton.webm",
         },
     }),
     "thunder": () => ({
