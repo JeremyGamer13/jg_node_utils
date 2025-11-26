@@ -1,7 +1,3 @@
-const audioPresets = require("./src/audio-presets");
-const overlayPresets = require("./src/overlay-presets");
+const jgNodeUtils = require("./src/index.js");
 
-module.exports = {
-    audioPresets,
-    overlayPresets,
-};
+module.exports = jgNodeUtils;
