@@ -7,7 +7,7 @@ const objectToSearchParams = (obj) => {
         const value = obj[key];
         searchParams.append(key, value);
     }
-    return searchParams.toString();
+    return "?" + searchParams.toString();
 };
 
 module.exports = {
