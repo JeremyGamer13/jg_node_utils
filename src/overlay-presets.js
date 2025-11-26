@@ -120,6 +120,16 @@ const presets = {
             path: "moneyrain.webm",
         },
     }),
+    "neighbor": () => ({
+        name: "neighbor",
+        short: "neighbor",
+        description: "Make sure to like and subscribe",
+        endpoint: "/api/video",
+        content: {
+            speed: 1.2,
+            path: "neighbor.webm",
+        },
+    }),
     "plane": () => ({
         name: "plane",
         short: "plane",
