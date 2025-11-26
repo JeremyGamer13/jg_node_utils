@@ -338,8 +338,8 @@ const presets = {
                 }),
                 // style
                 stylescreenshot: JSON.stringify({ width: "100%", height: "100%", filter: "grayscale(1)" }),
-                stylevignette: JSON.stringify({ width: "100%", height: "100%", opacity: 0.8, zIndex: 1 }),
-                styletuff: JSON.stringify({ left: "40%", bottom: "10%", width: "20%", height: "15%", objectFit: "contain", zIndex: 2 }),
+                stylevignette: JSON.stringify({ width: "100%", height: "100%", opacity: 0.8 }),
+                styletuff: JSON.stringify({ left: "40%", bottom: "10%", width: "20%", height: "15%", objectFit: "contain" }),
             },
         }
     },
